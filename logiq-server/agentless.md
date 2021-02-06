@@ -382,7 +382,7 @@ Sending data from docker to LOGIQ using TCP and non TLS port can be done as belo
 
 ```text
 docker run --log-driver syslog \
---log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 \
+--log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 -e MYSQL_ROOT_PASSWORD=pass \
 --log-opt syslog-format=rfc3164 --log-opt tag=mysql --name mysql3 -d mysql
 ```
 
